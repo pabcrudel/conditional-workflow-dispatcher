@@ -10,7 +10,7 @@ inputs:
 
 runs:
   using: composite
-  shell: bash
   steps:
     - name: Greet
+      shell: bash
       run: echo ${{ inputs.greet }}
