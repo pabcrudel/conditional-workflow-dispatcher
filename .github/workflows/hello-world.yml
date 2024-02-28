@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Use a composite action
-        uses: ./greeter
+        uses: ./.github/actions/greeter.yml
 
       - name: Use a composite action with a custom message
-        uses: ./greeter
+        uses: ./.github/actions/greeter.yml
         with:
           greet: 'Hello, GH-Actions'
