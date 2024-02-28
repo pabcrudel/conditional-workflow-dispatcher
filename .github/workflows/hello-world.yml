@@ -15,3 +15,8 @@ jobs:
 
       - name: Use a composite action
         uses: ./greeter
+
+      - name: Use a composite action with a custom message
+        uses: ./greeter
+        with:
+          greet: 'Hello, GH-Actions'
