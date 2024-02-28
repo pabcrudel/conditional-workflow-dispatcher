@@ -13,4 +13,5 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v4
 
-        uses: ./composite.yml
+      - name: Use a composite action
+        uses: ./greeter
