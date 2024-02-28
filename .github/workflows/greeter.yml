@@ -1,0 +1,15 @@
+name: Greet
+description: Prints a message
+author: Pablo Cru Delhom (pabcrudel)
+
+inputs:
+  greet:
+    description: Tell me something to greet
+    required: false
+    default: 'Hello, World!'
+
+runs:
+  using: composite
+  steps:
+    - name: Greet
+      run: echo ${{ inputs.greet }}
