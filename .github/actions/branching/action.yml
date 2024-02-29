@@ -1,0 +1,21 @@
+name: Greet
+description: Prints a message
+author: Pablo Cru Delhom (pabcrudel)
+
+inputs:
+  environment:
+    description: Which environment should be used
+    required: false
+    default: preview
+
+runs:
+  using: composite
+  steps:
+    - name: Preview action
+      shell: bash
+      run: |
+        if [[ ${{ inputs.environment }} == production ]]; then
+          echo Production command
+        else
+          echo Preview command
+        fi

@@ -20,3 +20,11 @@ jobs:
         uses: ./.github/actions/greeter
         with:
           greet: 'Hello, GH-Actions'
+
+      - name: Use a composite action with conditional branching
+        uses: ./.github/actions/branching
+
+      - name: Repeat action with custom environment
+        uses: ./.github/actions/branching
+        with:
+          environment: production
