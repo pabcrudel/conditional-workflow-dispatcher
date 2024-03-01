@@ -7,24 +7,24 @@ on:
       - main
 
 jobs:
-  greet:
+  use_composite_action:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout files
         uses: actions/checkout@v4
 
-      - name: Use a composite action
+      - name: Greet with default message
         uses: ./.github/actions/greeter
 
-      - name: Use a composite action with a custom message
+      - name: Greet with a custom message
         uses: ./.github/actions/greeter
         with:
           greet: 'Hello, GH-Actions'
 
-      - name: Use a composite action with conditional branching
+      - name: Branching with default environment
         uses: ./.github/actions/branching
 
-      - name: Repeat action with custom environment
+      - name: Branching with custom environment
         uses: ./.github/actions/branching
         with:
           environment: production
